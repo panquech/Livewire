@@ -10,7 +10,11 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
                 <!-- si está dentro de una carpeta, lo indicamos: 
                 'carpeta.nombre-vista' -->
-                @livewire('posts.create-post')
+                <!-- para pasarle variables se hace por medio de arreglo: -->
+                @livewire('posts.create-post', [
+                    'title' => 'HOLA WEBUDOS'    
+                ])
+
                 <x-welcome />
             </div>
         </div>

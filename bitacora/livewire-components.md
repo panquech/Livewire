@@ -47,3 +47,11 @@ En routes->web.php vamos a establecer que la vista es controlada por el '*contro
     - Dentro (se genera en config/livewire.php), modificar la siguiente linea (es el caso para laravel 11)
 
             'layout' => 'components.layouts.app', ------------> 'layout' => 'layouts.app',
+
+Es importante hacer mención de que cuando trabajas con componentes de Página completa, todo lo que pongas en la vista fuera del componente no será tomado en cuenta.
+
+Para hacer uso del componente lo llamamos:
+
+    @livewire('create-post', [
+        'atributos que queramos pasar (opcionales)' => 'valor del atributo'
+    ])
